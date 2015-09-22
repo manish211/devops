@@ -1,0 +1,23 @@
+{
+  "name": "hw1-devops",
+  "version": "0.0.1",
+  "description": "Repository for CSC 791 devops homework 1",
+  "main": "run.sh",
+  "dependencies": {
+    "needle": "^0.10.0",
+    "node-uuid": "^1.4.3",
+    "aws-sdk": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "devops",
+    "ansible",
+    "nodejs",
+    "provision"
+  ],
+  "author": "Manish Singh",
+  "license": "MIT"
+}

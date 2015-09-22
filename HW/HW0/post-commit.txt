@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo "Will open the google page now"
+
+open https://www.google.com &
+
+echo "Happy Searching "
+
+#Get its PID
+
+#PID=$!
+
+#Wait for 2 seconds
+#sleep 2
+
+#Kill it 
+#kill $PID
+
+#exit 0

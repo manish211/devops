@@ -90,6 +90,33 @@ function traverse(object, visitor)
     }
 }
 
+// A function to check if a particular node is a decision node
+
+// returns true or false. true if it is a decision node
+// false if it is not a decision node
+
+function isDecision(node){
+
+	// Check if it is an while/for statement
+
+	if(node.type =="ForInStatement" || node.type == "ForStatement" || 
+		node.type == "WhileStatement" || node.type == "DoWhileStatment"){
+
+		return true;
+	}
+
+	if(node.typ) 
+
+	
+
+
+
+	// if it is an alternate part of if statement, do not count
+
+
+
+}
+
 // A function following the Visitor pattern but allows canceling transversal if visitor returns false.
 function traverseWithCancel(object, visitor)
 {

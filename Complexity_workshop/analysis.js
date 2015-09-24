@@ -8,6 +8,7 @@ function main()
 
 	if( args.length == 0 )
 	{
+		// args = ["simpleAnalysis.js"];
 		args = ["analysis.js"];
 	}
 	var filePath = args[0];
@@ -70,15 +71,18 @@ function traverse(object, visitor)
         if (object.hasOwnProperty(key)) {
             child = object[key];
 
-	        	setTimeout(function(){
-	        		console.log(" This is from timeout baby");
+			if(child === 'parent'){
 
-           		console.log("----------- OBJECT BELOW ----------------") 
-	        	console.dir(key);
-	        	},4000);
+				console.log(child+" is a parent");
+				console.dir(child);
+				console.dir(key);
+			}
 
-           // console.log("----------- KEY BELOW ----------------") 
-	        	// console.dir(key);
+            // if(typeof child =='object'){
+            // 	console.dir(child)
+            // }
+            // console.log(typeof child);
+
             if (typeof child === 'object' && child !== null) {
                 traverse(child, visitor);
             }
@@ -111,6 +115,8 @@ function complexity(filePath)
 {
 	var buf = fs.readFileSync(filePath, "utf8");
 	var ast = esprima.parse(buf, options);
+
+	console.dir(ast);
 
 	var i = 0;
 	// Tranverse program with a function visitor.

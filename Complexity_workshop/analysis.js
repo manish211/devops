@@ -97,6 +97,25 @@ function traverse(object, visitor)
 
 function isDecision(node){
 
+	
+	if(node.type == "IfStatement"){
+
+		// If the parent of current node exists 
+		// && its parent is an IF statement
+		// if this parent is an "alternate" branch, then return false 
+		// else return true 
+		// So that we do not count the same decision point twice - one for each branch
+		
+		if(node.parent && node.parent.type == "IfStatement" && node["alternate"]){
+			return false;
+		}
+		else
+		{
+			return true; 
+		}
+	}
+
+
 	// Check if it is an while/for statement
 
 	if(node.type =="ForInStatement" || node.type == "ForStatement" || 
@@ -104,23 +123,12 @@ function isDecision(node){
 
 		return true;
 	}
-
-	if(node.typ) 
-
-	
-
-
-
-	// if it is an alternate part of if statement, do not count
-
-
-
-}
+} // End of isDecision function
 
 // A function following the Visitor pattern but allows canceling transversal if visitor returns false.
 function traverseWithCancel(object, visitor)
 {
-    var key, child;
+var key, child;
 
     // if( visitor.call(null, object) )
     if( visitor.call(null, object,null) )

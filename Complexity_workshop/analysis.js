@@ -125,6 +125,26 @@ function isDecision(node){
 	}
 } // End of isDecision function
 
+
+function getDepth(node,depth,result){
+
+	// if the current node is an object and has own properties
+	// and if that property in turn is an object itself,
+	// then that property is the child of the current node
+	// So if the child exists, then increment the counter by one.
+	// if the child is an alternate path of IF Block, then do not increment the counter
+	// this is to avoid counting the same level twice
+
+
+	// check if the current node has properties
+
+
+	
+
+
+
+}// End of getDepth function
+
 // A function following the Visitor pattern but allows canceling transversal if visitor returns false.
 function traverseWithCancel(object, visitor)
 {

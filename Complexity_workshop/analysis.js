@@ -62,12 +62,21 @@ function ComplexityBuilder()
 function traverse(object, visitor) 
 {
     var key, child;
+
+    console.log("object:"+ object);
+    console.dir(object);
     // console.log("ONE ONE");
 
     visitor.call(null, object);
 
     // console.log("TWO TWO");
     for (key in object) {
+    	console.log("*********************************");
+        console.dir(key);
+        continue;
+
+    	console.log("*********************************");
+    	return ;
         if (object.hasOwnProperty(key)) {
             child = object[key];
 
@@ -126,24 +135,38 @@ function isDecision(node){
 } // End of isDecision function
 
 
-function getDepth(node,depth,result){
+// function getDepth(node,depth,result){
 
-	// if the current node is an object and has own properties
-	// and if that property in turn is an object itself,
-	// then that property is the child of the current node
-	// So if the child exists, then increment the counter by one.
-	// if the child is an alternate path of IF Block, then do not increment the counter
-	// this is to avoid counting the same level twice
-
-
-	// check if the current node has properties
+// 	// if the current node is an object and has own properties
+// 	// and if that property in turn is an object itself,
+// 	// then that property is the child of the current node
+// 	// So if the child exists, then increment the counter by one.
+// 	// if the child is an alternate path of IF Block, then do not increment the counter
+// 	// this is to avoid counting the same level twice
 
 
+// 	// check if the current node has properties
+
+// 	for(key in node){
+// 		if(node.hasOwnProperty(key)){
+// 			child = node[key];
+
+// 			if(typeof child === 'object' && child !== null && key != 'parent'){
+// 				getDepth(child,depth,result);
+// 			}
+			
+// 			else{
+// 					children++;
+// 					getDepth(child,,result)
+// 			}
+// 		}
+// 	}   
+//    if(node.hasOwnProperty(key))
 	
 
 
 
-}// End of getDepth function
+// }// End of getDepth function
 
 // A function following the Visitor pattern but allows canceling transversal if visitor returns false.
 function traverseWithCancel(object, visitor)

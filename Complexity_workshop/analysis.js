@@ -162,7 +162,95 @@ function isDecision(node){
 // 		}
 // 	}   
 //    if(node.hasOwnProperty(key))
-	
+
+
+function visitDepth(node,depth,result)
+{
+    var key, child;
+    var children = 0;
+    for (key in node) 
+    {
+        if (node.hasOwnProperty(key)) 
+        {
+            child = node[key];
+            if (typeof child === 'object' && child !== null && key != 'parent') 
+            {
+                children++;
+                // Don't double count else/else if
+                if( key == "alternate" )
+                {
+                    visitDepth(child,depth,result)
+                }
+                else if( isDecision(child) )
+                {
+                    visitDepth(child, depth+1, result);
+                }
+                else
+                {
+                    visitDepth(child, depth, result);
+                }
+            }
+        }
+    }
+
+    if( children == 0 )
+    {
+        if( result.maxDepth < depth )
+        {
+            result.maxDepth = depth;
+        }
+    }
+
+}
+
+function decisionAncestors(node,scope)
+{
+    var p = node.parent;
+    var ancestors = [];
+    while( p != null && p != scope)
+    {
+        if( isDecision(p) )
+            ancestors.push(p);
+        p = p.parent;
+    }
+    return ancestors;
+}
+
+function childrenLength(node)
+{
+    var key, child;
+    var count = 0;
+    for (key in node) 
+    {
+        if (node.hasOwnProperty(key)) 
+        {
+            child = node[key];
+            if (typeof child === 'object' && child !== null && key != 'parent') 
+            {
+                count++;
+            }
+        }
+    }    
+    return count;
+}
+
+function traverseWithParents(object, visitor)
+{
+    var key, child;
+
+    visitor.call(null, object);
+
+    for (key in object) {
+        if (object.hasOwnProperty(key)) {
+            child = object[key];
+            if (typeof child === 'object' && child !== null && key != 'parent') 
+            {
+                child.parent = object;
+                    traverseWithParents(child, visitor);
+            }
+        }
+    }
+}	
 
 
 

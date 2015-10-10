@@ -6,7 +6,7 @@ faker.locale = "en";
 var mock = require('mock-fs');
 var _ = require('underscore');
 var Random = require('random-js');
-
+var tracker;
 //REFERENCE: Stackoverflow.com 
 function allCombinations(arg) {
     var r = [], max = arg.length-1;
@@ -526,6 +526,28 @@ function constraints(filePath)
 				// }
 
 
+				if( child.type == "BinaryExpression" && tracker){
+
+					console.dir(child);
+					console.log("tracker:"+tracker);
+					console.dir(params);
+					console.log(params[0]);
+					console.log(child.right.value);
+					// process.exit();
+
+					functionConstraints[funcName].constraints.push( 
+								new Constraint(
+								{
+									ident: params[0],
+									value:  '"' + child.right.value + "9854889"+'"',
+									funcName: funcName,
+									kind: "string",
+									operator : child.operator,
+									expression: expression
+								}));
+					// process.exit();
+				}
+
 				if( child.type === 'BinaryExpression' && child.operator == "==")
 				{
 					console.dir(child);
@@ -852,7 +874,18 @@ function constraints(filePath)
 
 
 				}
-				
+				//=============================================================================================================
+
+				if(child.type == "CallExpression" &&
+				   	child.callee.property &&
+					 child.callee.property.name =="substring") {	
+						
+					tracker = child.callee.object.name
+					console.log("tracker:"+tracker);
+					// process.exit();
+				}
+
+
 				//=============================================================================================================
 
 				if( child.type === 'LogicalExpression' && child.operator == "||") // pending : remove ||

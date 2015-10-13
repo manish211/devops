@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for HW2/test.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../prettify.css">
+    <link rel="stylesheet" href="../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header high">
+    <h1>Code coverage report for <span class="entity">HW2/test.js</span></h1>
+    <h2>
+        Statements: <span class="metric">100% <small>(207 / 207)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">100% <small>(207 / 207)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../index.html">All files</a> &#187; <a href="index.html">HW2/</a> &#187; test.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">var subject = require('./mystery.js')
+var mock = require('mock-fs');
+subject.inc(31,undefined);
+subject.inc(31,"mutated123982832AXZ");
+subject.inc(29,undefined);
+subject.inc(29,"mutated123982832AXZ");
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathNoContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathNoContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathNoContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathNoContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest({},'pathContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243","RandomMutation12334dsdf3243");
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243","RandomMutation12334dsdf3243");
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243","RandomMutation12334dsdf3243");
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243","RandomMutation12334dsdf3243");
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathNoContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathNoContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathNoContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathNoContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest("RandomMutation12334dsdf3243",'pathContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent',"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent',"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent',"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent',"RandomMutation12334dsdf3243");
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathNoContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathNoContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathNoContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathNoContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathContent/file1');
+mock.restore();
+mock({"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathContent/file1');
+mock.restore();
+mock({"path/fileExists":{},"pathContent":{"file1":"text content"},"pathNoContent":{"file1":""}});
+	subject.fileTest('pathContent','pathContent/file1');
+mock.restore();
+subject.normalize("abc123sdfdsjl12e32e");
+subject.normalize("12345");
+subject.normalize("abcd");
+subject.normalize("ABCD");
+subject.format("abc123sdfdsjl12e32e","abc123sdfdsjl12e32e",{});
+subject.format("abc123sdfdsjl12e32e","abc123sdfdsjl12e32e",true);
+subject.format("abc123sdfdsjl12e32e","abc123sdfdsjl12e32e",false);
+subject.format("abc123sdfdsjl12e32e","abc123sdfdsjl12e32e",true);
+subject.format("abc123sdfdsjl12e32e","abc123sdfdsjl12e32e",false);
+subject.format("abc123sdfdsjl12e32e","abc123sdfdsjl12e32e",{ shouldNormalize : true });
+subject.format("abc123sdfdsjl12e32e","abc123sdfdsjl12e32e",{ shouldNormalize : false });
+subject.format("abc123sdfdsjl12e32e","(NNN) NNN-NNNN",{});
+subject.format("abc123sdfdsjl12e32e","(NNN) NNN-NNNN",true);
+subject.format("abc123sdfdsjl12e32e","(NNN) NNN-NNNN",false);
+subject.format("abc123sdfdsjl12e32e","(NNN) NNN-NNNN",true);
+subject.format("abc123sdfdsjl12e32e","(NNN) NNN-NNNN",false);
+subject.format("abc123sdfdsjl12e32e","(NNN) NNN-NNNN",{ shouldNormalize : true });
+subject.format("abc123sdfdsjl12e32e","(NNN) NNN-NNNN",{ shouldNormalize : false });
+subject.format("abc123sdfdsjl12e32e","Nasdfds",{});
+subject.format("abc123sdfdsjl12e32e","Nasdfds",true);
+subject.format("abc123sdfdsjl12e32e","Nasdfds",false);
+subject.format("abc123sdfdsjl12e32e","Nasdfds",true);
+subject.format("abc123sdfdsjl12e32e","Nasdfds",false);
+subject.format("abc123sdfdsjl12e32e","Nasdfds",{ shouldNormalize : true });
+subject.format("abc123sdfdsjl12e32e","Nasdfds",{ shouldNormalize : false });
+subject.format("12345","abc123sdfdsjl12e32e",{});
+subject.format("12345","abc123sdfdsjl12e32e",true);
+subject.format("12345","abc123sdfdsjl12e32e",false);
+subject.format("12345","abc123sdfdsjl12e32e",true);
+subject.format("12345","abc123sdfdsjl12e32e",false);
+subject.format("12345","abc123sdfdsjl12e32e",{ shouldNormalize : true });
+subject.format("12345","abc123sdfdsjl12e32e",{ shouldNormalize : false });
+subject.format("12345","(NNN) NNN-NNNN",{});
+subject.format("12345","(NNN) NNN-NNNN",true);
+subject.format("12345","(NNN) NNN-NNNN",false);
+subject.format("12345","(NNN) NNN-NNNN",true);
+subject.format("12345","(NNN) NNN-NNNN",false);
+subject.format("12345","(NNN) NNN-NNNN",{ shouldNormalize : true });
+subject.format("12345","(NNN) NNN-NNNN",{ shouldNormalize : false });
+subject.format("12345","Nasdfds",{});
+subject.format("12345","Nasdfds",true);
+subject.format("12345","Nasdfds",false);
+subject.format("12345","Nasdfds",true);
+subject.format("12345","Nasdfds",false);
+subject.format("12345","Nasdfds",{ shouldNormalize : true });
+subject.format("12345","Nasdfds",{ shouldNormalize : false });
+subject.format("abcd","abc123sdfdsjl12e32e",{});
+subject.format("abcd","abc123sdfdsjl12e32e",true);
+subject.format("abcd","abc123sdfdsjl12e32e",false);
+subject.format("abcd","abc123sdfdsjl12e32e",true);
+subject.format("abcd","abc123sdfdsjl12e32e",false);
+subject.format("abcd","abc123sdfdsjl12e32e",{ shouldNormalize : true });
+subject.format("abcd","abc123sdfdsjl12e32e",{ shouldNormalize : false });
+subject.format("abcd","(NNN) NNN-NNNN",{});
+subject.format("abcd","(NNN) NNN-NNNN",true);
+subject.format("abcd","(NNN) NNN-NNNN",false);
+subject.format("abcd","(NNN) NNN-NNNN",true);
+subject.format("abcd","(NNN) NNN-NNNN",false);
+subject.format("abcd","(NNN) NNN-NNNN",{ shouldNormalize : true });
+subject.format("abcd","(NNN) NNN-NNNN",{ shouldNormalize : false });
+subject.format("abcd","Nasdfds",{});
+subject.format("abcd","Nasdfds",true);
+subject.format("abcd","Nasdfds",false);
+subject.format("abcd","Nasdfds",true);
+subject.format("abcd","Nasdfds",false);
+subject.format("abcd","Nasdfds",{ shouldNormalize : true });
+subject.format("abcd","Nasdfds",{ shouldNormalize : false });
+subject.format("ABCD","abc123sdfdsjl12e32e",{});
+subject.format("ABCD","abc123sdfdsjl12e32e",true);
+subject.format("ABCD","abc123sdfdsjl12e32e",false);
+subject.format("ABCD","abc123sdfdsjl12e32e",true);
+subject.format("ABCD","abc123sdfdsjl12e32e",false);
+subject.format("ABCD","abc123sdfdsjl12e32e",{ shouldNormalize : true });
+subject.format("ABCD","abc123sdfdsjl12e32e",{ shouldNormalize : false });
+subject.format("ABCD","(NNN) NNN-NNNN",{});
+subject.format("ABCD","(NNN) NNN-NNNN",true);
+subject.format("ABCD","(NNN) NNN-NNNN",false);
+subject.format("ABCD","(NNN) NNN-NNNN",true);
+subject.format("ABCD","(NNN) NNN-NNNN",false);
+subject.format("ABCD","(NNN) NNN-NNNN",{ shouldNormalize : true });
+subject.format("ABCD","(NNN) NNN-NNNN",{ shouldNormalize : false });
+subject.format("ABCD","Nasdfds",{});
+subject.format("ABCD","Nasdfds",true);
+subject.format("ABCD","Nasdfds",false);
+subject.format("ABCD","Nasdfds",true);
+subject.format("ABCD","Nasdfds",false);
+subject.format("ABCD","Nasdfds",{ shouldNormalize : true });
+subject.format("ABCD","Nasdfds",{ shouldNormalize : false });
+subject.blackListNumber("abc123sdfdsjl12e32e");
+subject.blackListNumber("12345");
+subject.blackListNumber("abcd");
+subject.blackListNumber("ABCD");
+subject.blackListNumber("9199854889");
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Oct 12 2015 22:41:09 GMT-0400 (EDT)</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

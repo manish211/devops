@@ -1,15 +1,14 @@
 {
-  "name": "test",
+  "name": "hw2_manish",
   "version": "0.0.0",
-  "description": "",
+  "description": "hw2 to demonstrate automatic test case generation for devops",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": 
-  {
+  "author": "Manish Singh",
+  "license": "MIT",
+  "devDependencies": {
     "esprima": "^1.2.3",
     "faker": "^2.1.2",
     "istanbul": "^0.3.5",
@@ -18,5 +17,20 @@
     "microtime": "^0.6.0",
     "random-js": "^1.0.5",
     "underscore": "^1.7.0"
-  }
+  },
+  "dependencies": {
+    "faker": "^2.1.5",
+    "esprima": "^1.2.5",
+    "istanbul": "^0.3.22",
+    "microtime": "^0.6.0",
+    "mock-fs": "^2.7.1",
+    "mockfs": "^0.1.5",
+    "random-js": "^1.0.6",
+    "underscore": "^1.8.3"
+  },
+  "keywords": [
+    "test",
+    "case",
+    "generation"
+  ]
 }

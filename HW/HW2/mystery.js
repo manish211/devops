@@ -1,6 +1,6 @@
 var fs = require("fs");
 
-function inc(p, q){
+function sadfdsinc(p, q){
     if(q ==undefined) q =1;
 
    if( p < 30 )
@@ -67,6 +67,6 @@ function blackListNumber(phoneNumber)
 exports.fileTest = fileTest;
 exports.normalize = normalize;
 exports.format = format;
-exports.inc = inc;
+exports.sadfdsinc = sadfdsinc;
 exports.blackListNumber = blackListNumber;
 

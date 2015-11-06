@@ -39,7 +39,7 @@ app.use(function(req, res, next)
 			req.headers.host = resp;
 			console.log("AFTER MODIFICATION:"+req.headers.host);
 
-			client.lpush('recentQueue',req.url,function(err,reply){
+			client.lpush('recentQueue',"http://"+req.headers.host+req.url,function(err,reply){
 
 			console.log(reply)
 
@@ -58,17 +58,30 @@ app.use(function(req, res, next)
 	// next(); // Passing the request to the next handler in the stack.
 });
 
+
 app.get('/recent',function(req,res){
 
 	
 		// Display all the recently visited sites
 		// Put code here pending
 
+		var recentString="<br>"
 		client.lrange('recentQueue',0,4,function(resp,reply){
 
 			console.log("reply: "+reply);
 
-			res.send(reply);
+			// res.send(reply);
+
+			for(var i=0; i<reply.length; i++){
+				recentString += reply[i] + "<br>" 
+				console.log(recentString)
+				console.log("+++++++====+++++++")
+			}
+
+			console.log(recentString)
+			res.write(recentString)
+			res.end()
+			// res.send(recentString)
 		})
 	
 })

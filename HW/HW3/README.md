@@ -12,6 +12,10 @@ Devops HW3 : Implementing Cache, Proxies, Queues
 
 ### Screencast for Demo: [Click Me : YouTube Video](https://youtu.be/JteExua190Q) to see the code in action
 
+### Screenshot to show recent five visited urls:
+![Screenshot](screenshot_recent.png)
+
+
 ### References:
 * [Redis Commands Reference](http://redis.io/commands)
 * [Redis Workshop by Dr. Parnin](https://github.com/CSC-DevOps/Queues)

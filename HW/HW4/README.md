@@ -11,9 +11,9 @@ Devops HW4 : Advanced Docker
 ---
 ### TASK 2: 
 
-* **Screencast for Demo** : [Click Me : YouTube Video](https://youtu.be/9nffQFnUu-k) to see the code in action
+* **Screencast for Demo** : [Click Me : YouTube Video](https://youtu.be/kGgpoFIoGK0) to see the code in action
 
-* **Folder for Task 2**: [Task1](https://github.com/manish211/devops/tree/master/HW/HW4/hw4_task2)
+* **Folder for Task 2**: [Task2](https://github.com/manish211/devops/tree/master/HW/HW4/hw4_task2)
 
 ---
 ### TASK 3:

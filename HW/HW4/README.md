@@ -1,7 +1,6 @@
 Devops HW4 : Advanced Docker
 =========================
----
----
+
 
 ### TASK 1: 
 

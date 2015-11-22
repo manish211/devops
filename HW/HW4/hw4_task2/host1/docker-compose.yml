@@ -1,0 +1,12 @@
+redis:
+  image: crosbymichael/redis
+  container_name: redis
+redis_ambassador:
+  image: svendowideit/ambassador
+  container_name: redis_amb_big_server
+  ports:
+   - "6379:6379"
+  links:
+   - redis
+
+

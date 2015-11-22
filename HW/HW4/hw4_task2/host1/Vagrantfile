@@ -1,0 +1,34 @@
+Vagrant.configure(2) do |config|
+
+   config.vm.box = "ubuntu/trusty64"
+
+   config.vm.box_check_update = false 
+
+   config.vm.provider "virtualbox" do |vb| 
+
+     vb.gui = true  
+
+     vb.memory = "2048"
+  
+     vb.name = "HW4_HOST1"
+
+     config.vm.network "public_network", bridge: "en1: Wi-Fi (AirPort)"
+     
+
+   end
+
+
+   config.vm.provision "shell", inline: <<-SHELL
+
+   apt-get update
+   curl -sSL https://get.docker.com/ | sh
+   gpasswd -a vagrant docker
+   service docker restart
+   curl -L https://github.com/docker/compose/releases/download/1.5.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+   chmod +x /usr/local/bin/docker-compose
+
+   source /etc/environment
+
+   SHELL
+
+end
